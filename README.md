@@ -52,7 +52,7 @@ To train the model or replicate the fine-tuning results presented in the paper, 
 The simplest way to use BM-MAE is to extract a relevant representation through the ViT encoder. Suppose, for a patient, you only have two modalities: T1 and T2
 ```python
 import torch
-from bmmae.models import ViTEncoder
+from bmmae.model import ViTEncoder
 from bmmae.tokenizers import MRITokenizer
 
 modalities = ['t1', 't2']
@@ -65,7 +65,7 @@ tokenizers = {
             for modality in modalities
         }
 
-model = ViTEncoder(
+encoder = ViTEncoder(
             modalities=modalities,
             tokenizers=tokenizers,
             cls_token=True
