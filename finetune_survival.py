@@ -18,7 +18,7 @@ from bmmae.tokenizers import MRITokenizer
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--epochs", type=int, default=10, help="Number of epochs to train the model")
+    parser.add_argument("--epochs", type=int, default=5, help="Number of epochs to train the model")
     parser.add_argument(
         "--modalities",
         nargs="+",
@@ -38,8 +38,8 @@ if __name__ == "__main__":
     parser.add_argument("--entity", type=str, default=None, help="Entity for wandb logging")
     parser.add_argument("--project", type=str, default="bmmae", help="Project for wandb logging")
     parser.add_argument("--seed", type=int, default=1999, help="Seed for reproducibility")
-    parser.add_argument("--warmup_epochs", type=int, default=5, help="Warmup epochs for the model")
-    parser.add_argument("--scaling_factor", type=int, default=20, help="Scaling factor for the model")
+    parser.add_argument("--warmup_epochs", type=int, default=2, help="Warmup epochs for the model")
+    parser.add_argument("--scaling_factor", type=int, default=10, help="Scaling factor for the model")
     parser.add_argument(
         "--from_scratch",
         type=bool,
